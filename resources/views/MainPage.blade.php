@@ -16,10 +16,10 @@
            class="rounded active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black">
             регистрируйся </a>
         <h1> / </h1>
-        <h1 class="rounded active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black">
-            входи </h1>
+        <a href="{{route('LoginIndex')}}" class="rounded active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black">
+            входи </a>
 
-        <input class="text-yellow-700 focus:outline-none border-yellow-800 border-3 border-rounded rounded-lg "
+        <input class="ease-in-out duration-500 focus:border-yellow-700 focus:text-yellow-700 text-white/70 focus:outline-none border-white/70 border-3 border-rounded rounded-lg "
                type="text" placeholder="поиск">
         <div class="text-white/80">
             @if(\Illuminate\Support\Facades\Auth::check())
