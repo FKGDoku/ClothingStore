@@ -5,24 +5,36 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ФУТБОЛКИ</title>
     @vite('resources/css/app.css')
 </head>
 <body class="bg-black">
 
 <footer class=" cursor-pointer text-white/80 font-light">
     <div class="ml-2 mt-2 mb-2 flex gap-5">
-    <h1 class="rounded active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black"> регистрируйся </h1>
-    <h1> / </h1>
-    <h1 class="rounded active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black"> входи </h1>
+        <a href="{{route('registrationIndex')}}"
+           class="rounded active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black">
+            регистрируйся </a>
+        <h1> / </h1>
+        <h1 class="rounded active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black">
+            входи </h1>
 
-        <input class="border-white/80 border border-rounded rounded-lg " type="text" placeholder="Поиск">
-
-        <h1 class="active:shadow-lg shadow-white/40 rounded-lg duration-300 ease-in-out active:text-black active:bg-yellow-700 mr-5 ml-auto">быть Русским - жить вечно</h1>
+        <input class="text-yellow-700 focus:outline-none border-yellow-800 border-3 border-rounded rounded-lg "
+               type="text" placeholder="поиск">
+        <div class="text-white/80">
+            @if(\Illuminate\Support\Facades\Auth::check())
+                приветствуем тебя {{\Illuminate\Support\Facades\Auth::user()->name}}
+            @endif
+        </div>
+        <div class="flex flex-row gap-2 active:shadow-lg shadow-white/40 rounded-lg duration-200 ease-in-out active:text-black active:bg-yellow-700 mr-5 ml-auto">
+            <img class="h-7 w-7" src="{{ Vite::asset('resources/images/orthodox-cross.png') }}"
+                 alt="Православный крест">
+            <h1>быть Русским - жить вечно</h1>
+        </div>
     </div>
 
     <div class="flex justify-center items-center gap-25">
-        <h1 class="rounded-lg active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black text-xl">
+        <h1 class="rounded-lg bg-white/70 shadow-lg shadow-white/50 duration-200 ease-in-out text-black text-xl">
             футболки</h1>
         <h1 class="rounded-lg active:bg-white/70 active:shadow-lg shadow-white/50 duration-200 ease-in-out active:text-black text-xl text-xl">
             свитшоты</h1>
@@ -52,19 +64,19 @@
         <div class="font-light text-white/80 mt-2 rounded-md p-3 shadow-md z-10 min-w-[180px]">
             <ul class="cursor-pointer flex-col flex gap-2 justify-center">
 
-                <li class="active:border-white border border-1 border-white/50 active:text-white duration-150 ease-in-out">
+                <li class="active:border-yellow-700 border border-1 border-white/50 active:text-white duration-150 ease-in-out">
                     белый
                 </li>
-                <li class="active:border-white border border-1 border-white/50 active:text-white duration-150 ease-in-out">
+                <li class="active:border-yellow-700 border border-1 border-white/50 active:text-white duration-150 ease-in-out">
                     графит
                 </li>
-                <li class="active:border-white border border-1 border-white/50 active:text-white duration-150 ease-in-out">
+                <li class="active:border-yellow-700 border border-1 border-white/50 active:text-white duration-150 ease-in-out">
                     серый
                 </li>
-                <li class="active:border-white border border-1 border-white/50 active:text-white duration-150 ease-in-out">
+                <li class="active:border-yellow-700 border border-1 border-white/50 active:text-white duration-150 ease-in-out">
                     хаки
                 </li>
-                <li class="active:border-white border border-1 border-white/50 active:text-white duration-150 ease-in-out">
+                <li class="active:border-yellow-700 border border-1 border-white/50 active:text-white duration-150 ease-in-out">
                     черный
                 </li>
             </ul>
